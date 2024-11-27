@@ -1,0 +1,18 @@
+---
+import {LogosLinkedinIcon} from "./icons/LogosLinkedinIcon";
+import {MdiGithub} from "./icons/MdiGithub";---
+
+<div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 bg-gray-800 p-3 rounded-lg shadow-lg">
+    <a href="https://www.linkedin.com/in/lylian-guerra-rago-6aa383285/" target="_blank" class="text-2xl text-blue-600 hover:text-yellow-600 transition-colors">
+        <LogosLinkedinIcon client:load />
+    </a>
+    <a href="https://github.com/ER-28" target="_blank" class="text-2xl text-gray-300 hover:text-yellow-500 transition-colors">
+        <MdiGithub client:load />
+    </a>
+</div>
+
+<style>
+    div {
+        z-index: 50;
+    }
+</style>

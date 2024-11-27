@@ -1,0 +1,42 @@
+---
+---
+<section class="py-10 ">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-extrabold animate-fade-in-up">Hey, I'm <span class="text-yellow-500">Lylian Guerra--Rago</span></h2>
+        <h3 class="text-2xl animate-fade-in-up">
+            A 20 years old Fullstack Web Developer from <span class="italic">Lyon, France</span>
+        </h3>
+        <p class="text-gray-400 mt-4 animate-fade-in-up">
+            I'm mainly focused on <span class="font-bold">front-end and back-end development</span>, but I've also done languages at more or less low levels,<br>
+            and I've <span class="font-bold">taken care of entire refactor</span> of the front-end,<br>
+            where I've also had to <span class="font-bold">research and develop a new architecture</span>.
+        </p>
+        <div class="flex px-5 py-5">
+            <p class="bg-gray-900 p-2 rounded text-green-400 font-bold italic animate-fade-in-up">I also work on some of my open source project</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto py-6">
+        <div class="flex flex-row items-center gap-4">
+            <button class="bg-yellow-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors animate-fade-in-up">Contact me</button>
+            <button class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors animate-fade-in-up">Download CV</button>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fade-in-up 0.7s ease-out forwards;
+    }
+</style>
