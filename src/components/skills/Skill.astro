@@ -1,0 +1,77 @@
+---
+interface Props {
+	name: string;
+	percent: number;
+	color: string;
+}
+
+const { name, percent, color } = Astro.props;
+
+const colors: {
+	[key: string]: string;
+} = {
+	// Reds and Warm Tones
+	crimson: "rgb(220,20,60)",
+	coral: "rgb(255,99,71)",
+	maroon: "rgb(128,0,0)",
+
+	// Blues and Cool Tones
+	sapphire: "rgb(15,82,186)",
+	navy: "rgb(0,30,98)",
+	turquoise: "rgb(64,224,208)",
+
+	// Greens
+	emerald: "rgb(46,139,87)",
+	sage: "rgb(76,187,123)",
+	olive: "rgb(85,107,47)",
+
+	// Yellows and Oranges
+	goldenrod: "rgb(218,165,32)",
+	amber: "rgb(255,191,0)",
+	tangerine: "rgb(255,99,71)",
+
+	// Purples and Violets
+	royal: "rgb(102,51,153)",
+	lavender: "rgb(147,112,219)",
+	plum: "rgb(142,69,133)",
+
+	// Pinks and Magentas
+	magenta: "rgb(199,21,133)",
+	rose: "rgb(255,102,159)",
+	fuchsia: "rgb(199,21,133)",
+
+	// Teals and Aquas
+	caribbean: "rgb(0,204,153)",
+	teal: "rgb(0,128,128)",
+	aquamarine: "rgb(127,255,212)",
+
+	// Neutrals and Earthy Tones
+	charcoal: "rgb(54,69,79)",
+	slate: "rgb(112,128,144)",
+	bronze: "rgb(205,127,50)",
+};
+
+const colorClass = colors[color] || colors.gray;
+---
+
+<div class="w-full max-w-lg my-2">
+    <p class="my-2 font-bold">{name}</p>
+    <div class="w-full h-3 bg-gray-800 rounded overflow-hidden">
+        <div
+            class={`progress-fill h-full rounded`}
+            style={`width: ${percent}%`}
+        ></div>
+    </div>
+</div>
+<style define:vars={{ colorClass }}>
+    .progress-fill {
+        animation: progress-animation 1.5s ease-in-out;
+        background-color: var(--colorClass);
+    }
+
+    @keyframes progress-animation {
+        0% {
+            width: 0;
+        }
+    }
+</style>

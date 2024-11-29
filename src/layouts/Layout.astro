@@ -1,6 +1,6 @@
 ---
-import Header from "../components/Header.astro";
-import Social from "../components/Social.astro";
+import Header from "../components/layout/Header.astro";
+import Social from "../components/layout/Social.astro";
 interface Props {
 	title: string;
 	currentPage: string;
@@ -27,8 +27,6 @@ const { title, currentPage } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-	}
 	html {
 		font-family:
 			DejaVu Sans Mono,
