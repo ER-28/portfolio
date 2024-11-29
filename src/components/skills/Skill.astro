@@ -54,7 +54,7 @@ const colors: {
 const colorClass = colors[color] || colors.gray;
 ---
 
-<div class="w-full max-w-lg my-2">
+<div class="w-full my-2">
     <p class="my-2 font-bold">{name}</p>
     <div class="w-full h-3 bg-gray-800 rounded overflow-hidden">
         <div
@@ -63,6 +63,7 @@ const colorClass = colors[color] || colors.gray;
         ></div>
     </div>
 </div>
+
 <style define:vars={{ colorClass }}>
     .progress-fill {
         animation: progress-animation 1.5s ease-in-out;
