@@ -1,0 +1,19 @@
+---
+interface Props {
+	degree: string;
+	school: string;
+	year: string;
+	description: string;
+	level?: string;
+}
+
+const { level, degree, school, year, description } = Astro.props;
+---
+
+<section class="flex flex-col gap-2 py-6">
+    <h3 class="font-bold text-lg text-orange-300 animate-fade-in-up-x">{school}</h3>
+    <p class="text-yellow-500 animate-fade-in-up-x">{degree}</p>
+    <p class="text-gray-400 underline animate-fade-in-up-x">{year}</p>
+    <p class="text-gray-400 animate-fade-in-up-x">{level}</p>
+    <p class="text-gray-400 animate-fade-in-up-x">{description}</p>
+</section>

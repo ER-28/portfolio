@@ -1,0 +1,44 @@
+---
+import Element from "../components/Element.astro";
+import List from "../components/List.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="My Education" currentPage="/education">
+    <main>
+        <List
+            title="Education"
+        >
+            <Element
+                degree="Bachelor IT Project Manager"
+                school="Isitech"
+                year="2023-2026"
+                description="I'm currently studying at Isitech for a bachelor's degree in IT project management. I'm learning about project management, software development and other IT-related subjects. I'm also gaining practical experience through work-study and other projects."
+            />
+            <Element
+                degree="42 Pool"
+                school="42"
+                year="2023-2023"
+                description="I try the 42 pool in 2023, where I learned C, shell, and git. I also learned how to work with other developers and how to solve problems on my own. I also leaned a new way to think my code with the norme and multiple test."
+            />
+            <Element
+                degree="Programming, Web Development, Design Systems, and more"
+                school="Self-taught"
+                year="2014-2023"
+                description="I have been learning programming, web development, design systems, and more since 2014. I have learned from various sources, including online courses, books, and documentation. I have also learned from my own projects and from working with other developers."
+            />
+            <Element
+                degree="Baccalaureate STI2D"
+                school="Jean Lurçat High School"
+                year="2021-2023"
+                description=""
+            />
+            <Element
+                degree="Baccalaureate STI2D"
+                school="Saint Louis Sainte Marie High School"
+                year="2019-2021"
+                description=""
+            />
+        </List>
+    </main>
+</Layout>

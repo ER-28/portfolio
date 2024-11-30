@@ -33,9 +33,9 @@ const { currentPage } = Astro.props;
         ">
             <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
                 <li class="text-center"><a href="/" class={`${currentPage === "/" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Me</a></li>
-                <li class="text-center"><a href="/education" class="text-white hover:text-yellow-500 transition-colors">Education</a></li>
-                <li class="text-center"><a href="/experience" class="text-white hover:text-yellow-500 transition-colors">Experience</a></li>
-                <li class="text-center"><a href="/projects" class="text-white hover:text-yellow-500 transition-colors">Projects</a></li>
+                <li class="text-center"><a href="/education" class={`${currentPage === "/education" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Education</a></li>
+                <li class="text-center"><a href="/work" class={`${currentPage === "/work" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Work</a></li>
+                <li class="text-center"><a href="/projects" class={`${currentPage === "/projects" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Projects</a></li>
                 <li class="text-center"><a href="/contact" class="text-white hover:text-yellow-500 transition-colors">Contact</a></li>
             </ul>
         </nav>
@@ -43,7 +43,7 @@ const { currentPage } = Astro.props;
 </header>
 
 <style>
-    @keyframes fade-in-up-x {
+    @keyframes fade-in-up {
         0% {
             opacity: 0;
             transform: translateX(50px);
@@ -54,7 +54,7 @@ const { currentPage } = Astro.props;
         }
     }
 
-    .animate-fade-in-up-x {
+    .animate-fade-in-up {
         animation: fade-in-up 0.6s ease-out forwards;
     }
 </style>

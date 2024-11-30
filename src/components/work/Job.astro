@@ -1,0 +1,38 @@
+---
+interface Props {
+    title: string;
+    company: string;
+    year: string;
+    location: string;
+    mainResponsibilities: string[];
+    technicalAchievements: string[];
+    keySkills: string[];
+}
+
+const { title, company, year, location, mainResponsibilities, technicalAchievements, keySkills } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 py-6">
+    <h3 class="font-bold text-xl text-orange-300 animate-fade-in-up-x">{title}</h3>
+    <p class="text-yellow-500 animate-fade-in-up-x">{company}</p>
+    <p class="text-gray-400 underline animate-fade-in-up-x">{year}</p>
+    <p class="text-gray-400 animate-fade-in-up-x">{location}</p>
+    <section class="flex flex-col gap-2 py-6">
+        <h4 class="font-bold text-md text-orange-300 animate-fade-in-up-x underline">Main Responsibilities</h4>
+        {mainResponsibilities.map((responsibility) => (
+            <p class="text-gray-400 animate-fade-in-up-x">{responsibility}</p>
+        ))}
+    </section>
+    <section class="flex flex-col gap-2 py-6">
+        <h4 class="font-bold text-md text-orange-300 animate-fade-in-up-x underline">Technical Achievements</h4>
+        {technicalAchievements.map((achievement) => (
+            <p class="text-gray-400 animate-fade-in-up-x">{achievement}</p>
+        ))}
+    </section>
+    <section class="flex flex-col gap-2 py-6">
+        <h4 class="font-bold text-md text-orange-300 animate-fade-in-up-x underline">Key Skills</h4>
+        {keySkills.map((skill) => (
+            <p class="text-gray-400 animate-fade-in-up-x">{skill}</p>
+        ))}
+    </section>
+</div>
