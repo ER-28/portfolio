@@ -20,25 +20,25 @@ const { currentPage } = Astro.props;
             </button>
         </div>
 
-        <nav class="
-            mobile-menu
-            hidden
-            md:block
-            w-full md:w-auto
-            absolute md:relative
-            top-16 md:top-0
-            left-0 md:left-auto
-            bg-gray-900 md:bg-transparent
-            z-20
-        ">
-            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
-                <li class="text-center"><a href="/" class={`${currentPage === "/" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Me</a></li>
-                <li class="text-center"><a href="/education" class={`${currentPage === "/education" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Education</a></li>
-                <li class="text-center"><a href="/work" class={`${currentPage === "/work" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Work</a></li>
-                <li class="text-center"><a href="/projects" class={`${currentPage === "/projects" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Projects</a></li>
-                <li class="text-center"><a href="/contact" class="text-white hover:text-yellow-500 transition-colors">Contact</a></li>
-            </ul>
-        </nav>
+        <!--<nav class="-->
+        <!--    mobile-menu-->
+        <!--    hidden-->
+        <!--    md:block-->
+        <!--    w-full md:w-auto-->
+        <!--    absolute md:relative-->
+        <!--    top-16 md:top-0-->
+        <!--    left-0 md:left-auto-->
+        <!--    bg-gray-900 md:bg-transparent-->
+        <!--    z-20-->
+        <!--">-->
+        <!--    <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">-->
+        <!--        <li class="text-center"><a href="/" class={`${currentPage === "/" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Me</a></li>-->
+        <!--        <li class="text-center"><a href="/education" class={`${currentPage === "/education" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Education</a></li>-->
+        <!--        <li class="text-center"><a href="/work" class={`${currentPage === "/work" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Work</a></li>-->
+        <!--        <li class="text-center"><a href="/projects" class={`${currentPage === "/projects" ? "text-yellow-400" : "text-white"} hover:text-yellow-500 transition-colors`}>Projects</a></li>-->
+        <!--        <li class="text-center"><a href="/contact" class="text-white hover:text-yellow-500 transition-colors">Contact</a></li>-->
+        <!--    </ul>-->
+        <!--</nav>-->
     </div>
 </header>
 
@@ -60,13 +60,13 @@ const { currentPage } = Astro.props;
 </style>
 
 <script>
-    if (document) {
-        const hamburger_menu = document.querySelector('.hamburger-menu')
-        const mobile_menu = document.querySelector('.mobile-menu')
-        if (hamburger_menu && mobile_menu) {
-            hamburger_menu.addEventListener('click', function() {
-                mobile_menu.classList.toggle('hidden');
-            });
-        }
-    }
+    // if (document) {
+    //     const hamburger_menu = document.querySelector('.hamburger-menu')
+    //     const mobile_menu = document.querySelector('.mobile-menu')
+    //     if (hamburger_menu && mobile_menu) {
+    //         hamburger_menu.addEventListener('click', function() {
+    //             mobile_menu.classList.toggle('hidden');
+    //         });
+    //     }
+    // }
 </script>
