@@ -1,39 +1,8 @@
 ---
-import List from "../components/List.astro";
 import Layout from "../layouts/Layout.astro";
-import Job from "../components/work/Job.astro";
 ---
 
 <Layout title="My Work" currentPage="/work">
     <main>
-        <List
-            title="Work"
-        >
-            <Job
-                title="FullStack Web Developer"
-                company="XEFI"
-                year="2023-2024"
-                mainResponsibilities={[
-                    'Led complete redesign of enterprise web application, involving significant architectural and technological transformation',
-                    'Designed and implemented an innovative front-end architecture integrating:',
-                    '- MVVM (Model-View-ViewModel) architecture for clear responsibility separation',
-                    '- Clean Architecture principles for code maintainability and modularity',
-                    '- Test-Driven Development (TDD) approach to ensure development quality and robustness',
-                    '- Multi-repository strategy to optimize application component management'
-                ]}
-                location="Lyon, France"
-                technicalAchievements={[
-                    'Complete restructuring of existing software architecture',
-                    'Implementation of rigorous development practices',
-                    'Significant improvement in web application performance and maintainability'
-                ]}
-                keySkills={[
-                    'Advanced software architecture',
-                    'Full stack development',
-                    'Agile methodologies',
-                    'Unit testing and integration',
-                ]}
-            />
-        </List>
     </main>
 </Layout>
