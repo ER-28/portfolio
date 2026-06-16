@@ -61,12 +61,20 @@ jobs:
       - name: Build with Next.js
         run: pnpm run build
         env:
+          # Ensure GitHub passes the correct base path variable
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+
+      - name: Verify Output
+        run: |
+          ls -la out/
+          # Optional: Check if .next/standalone exists (it shouldn't if output=export)
+          ls -la .next/ || echo ".next folder exists but 'out' is used for static export"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          # MUST point to the 'out' directory for static exports
+          path: './out'
 
   deploy:
     environment:
