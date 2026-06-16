@@ -42,7 +42,7 @@ export const experienceData = [
         endYear: "2024",
         bulletPoints: [
             "Architected and deployed a modern software infrastructure to replace an outdated legacy application",
-            "Led agile-based project estimation, task breakdown, and sprint planning to ensure timely delivery",
+            "Made agile-based project estimation, task breakdown, and sprint planning to ensure timely delivery",
             "Achieved measurable improvements in system performance and maintainability"
         ]
     },
