@@ -26,7 +26,7 @@ const AboutMe = () => {
   return (
     <section>
       <div className="container">
-        <div className="border-x border-border bg-[url('/images/about-me/about-me-bg.svg')] bg-cover bg-center bg-no-repeat">
+        <div className="border-x border-border bg-[url('/portfolio/images/about-me/about-me-bg.svg')] bg-cover bg-center bg-no-repeat">
           <div className="flex flex-col gap-9 sm:gap-12 max-w-3xl mx-auto px-4 sm:px-7 py-11 md:py-20">
             <div className="flex flex-col gap-4">
               <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
