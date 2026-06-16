@@ -25,7 +25,7 @@ const ProjectOverview = () => {
                     >
                       <h4>{value?.name}</h4>
                       <Image
-                        src={"/images/icon/tile-arrow-icon.svg"}
+                        src={"/portfolio/images/icon/tile-arrow-icon.svg"}
                         alt="tile-icon"
                         width={24}
                         height={24}
@@ -54,7 +54,7 @@ const ProjectOverview = () => {
                       </h4>
                       {!isComingSoon ? (
                         <Image
-                          src={"/images/icon/tile-arrow-icon.svg"}
+                          src={"/portfolio/images/icon/tile-arrow-icon.svg"}
                           alt="tile-icon"
                           width={24}
                           height={24}

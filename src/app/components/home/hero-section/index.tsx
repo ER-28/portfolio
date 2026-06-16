@@ -27,7 +27,7 @@ const HeroSection = () => {
             <div className="relative flex flex-col xs:flex-row items-center xs:items-start justify-center xs:justify-between max-w-3xl mx-auto gap-10 xs:gap-3 px-4 sm:px-7 pt-22 pb-8 sm:pb-12">
               <div className="absolute top-0 transform -translate-y-1/2">
                 <Image
-                  src={"/images/profil.jpg"}
+                  src={"/portfolio/images/profil.jpg"}
                   alt="user-img"
                   width={145}
                   height={145}
@@ -42,7 +42,7 @@ const HeroSection = () => {
                 </p>
                 <div className="flex items-center gap-2">
                   <Image
-                    src={"/images/icon/map-icon.svg"}
+                    src={"/portfolio/images/icon/map-icon.svg"}
                     alt="map-icon"
                     width={20}
                     height={20}
@@ -73,7 +73,7 @@ const HeroSection = () => {
                   >
                     <span className="flex items-center gap-3 bg-primary hover:bg-[linear-gradient(96.09deg,_#9282F8_12.17%,_#F3CA4D_90.71%)] py-2.5 px-5 rounded-full">
                       <Image
-                        src="/images/icon/spark-icon.svg"
+                        src="/portfolio/images/icon/spark-icon.svg"
                         alt="spark-icon"
                         width={14}
                         height={14}

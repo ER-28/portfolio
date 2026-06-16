@@ -1,6 +1,6 @@
 export const experienceData = [
     {
-        icon: "/images/reysin.png",
+        icon: "/portfolio/images/reysin.png",
         role: "Founder, Reysin",
         location: "Lyon, FR",
         startYear: "2025",
@@ -12,7 +12,7 @@ export const experienceData = [
         ]
     },
     {
-        "icon": "/images/photograph.png",
+        "icon": "/portfolio/images/photograph.png",
         "role": "Photographer & Visual Content Creator, Freelance",
         "location": "Lyon, FR",
         "startYear": "2026",
@@ -24,7 +24,7 @@ export const experienceData = [
         ]
     },
     {
-        icon: "/images/dgfip.png",
+        icon: "/portfolio/images/dgfip.png",
         role: "Frontend Developer (Apprenticeship), DGFIP",
         location: "Lyon, FR",
         startYear: "2025",
@@ -35,7 +35,7 @@ export const experienceData = [
         ]
     },
     {
-        icon: "/images/xefi.webp",
+        icon: "/portfolio/images/xefi.webp",
         role: "Frontend Lead Developer (Apprenticeship), Xefi",
         location: "Lyon, FR",
         startYear: "2023",
