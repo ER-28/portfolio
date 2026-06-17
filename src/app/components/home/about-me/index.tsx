@@ -1,30 +1,8 @@
 import { Badge } from "@/components/ui/badge";
-
-const servicesBadge = [
-  "Graphic Design",
-  "User Experience",
-  "Architecture",
-  "Development",
-  "Refactoring",
-  "TDD",
-  "Kubernetes",
-  "Proxmox",
-  "Nixos",
-  "Treafik",
-  "Docker",
-  "Javascript / TypeScript",
-  "Python",
-  "Rust",
-  "C / C++",
-  "SQL / MongoDB",
-  "Neo4j",
-  "NestJS",
-  "Nextjs",
-  "React",
-];
+import {services} from "@/data/services";
 
 const AboutMe = () => (
-  <section>
+  <section aria-label="About me">
     <div className="container">
       <div className="border-x border-border bg-[url('/portfolio/images/about-me/about-me-bg.svg')] bg-cover bg-center bg-no-repeat">
         <div className="flex flex-col gap-9 sm:gap-12 max-w-3xl mx-auto px-4 sm:px-7 py-11 md:py-20">
@@ -45,19 +23,16 @@ const AboutMe = () => (
             </h5>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="text-sm text-primary uppercase font-medium">
-              Services
-            </p>
-            <div className="flex flex-wrap gap-2 sm:gap-3">
-              {servicesBadge.map((value, index) => (
+            <p className="text-sm text-primary uppercase font-medium">Services</p>
+            <div className="flex flex-wrap gap-2 sm:gap-3" role="list" aria-label="Skills and services">
+              {services.map((service) => (
                 <Badge
+                  key={service}
                   variant="outline"
-                  key={index}
                   className="py-1.5 px-3 rounded-lg h-full"
+                  role="listitem"
                 >
-                  <p className="text-xs sm:text-sm font-medium text-primary">
-                    {value}
-                  </p>
+                  <span className="text-xs sm:text-sm font-medium text-primary">{service}</span>
                 </Badge>
               ))}
             </div>
