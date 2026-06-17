@@ -1,3 +1,4 @@
+import Contributions from "./components/home/contributions"
 import Divider from "./components/divider"
 import AboutMe from "./components/home/about-me"
 import Education from "./components/home/education"
@@ -20,6 +21,8 @@ const page = () => {
       <Education/>
       <Divider/>
       <ProjectOverview/>
+      <Divider/>
+      <Contributions/>
       <Divider/>
     </main>
   )
