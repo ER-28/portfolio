@@ -1,4 +1,6 @@
-export const projectOverview = {
+import type {ProjectOverview} from "@/types";
+
+export const projectOverview: ProjectOverview = {
     caseStudies: [
         {name: "Professional & Automated Infrastructure", url: "#"},
     ],

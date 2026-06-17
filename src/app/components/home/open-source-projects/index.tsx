@@ -1,38 +1,12 @@
 import Link from "next/link";
 import {SiGithub} from "@icons-pack/react-simple-icons";
 
+import SectionHeader from "@/components/shared/section-header";
 import {openSourceProjects} from "@/data/openSourceProjects";
-
-type RepoData = {
-  name: string
-  full_name: string
-  description: string | null
-  html_url: string
-  homepage: string | null
-  language: string | null
-  stargazers_count: number
-  topics: string[]
-}
-
-const GITHUB_API = "https://api.github.com";
-
-async function getRepos(): Promise<RepoData[]> {
-  try {
-    const results = await Promise.all(
-      openSourceProjects.map((repo) =>
-        fetch(`${GITHUB_API}/repos/${repo}`, {
-          next: {revalidate: 3600},
-        }).then((res) => (res.ok ? res.json() : null))
-      )
-    );
-    return results.filter(Boolean) as RepoData[];
-  } catch {
-    return [];
-  }
-}
+import {fetchRepos} from "@/lib/github";
 
 const OpenSourceProjects = async () => {
-  const repos = await getRepos();
+  const repos = await fetchRepos(openSourceProjects);
 
   if (repos.length === 0) return null;
 
@@ -40,13 +14,7 @@ const OpenSourceProjects = async () => {
     <section>
       <div className="container">
         <div className="border-x border-border">
-          <div className="flex flex-col max-w-3xl mx-auto py-10 px-4 sm:px-7">
-            <div className="flex flex-col xs:flex-row gap-5 items-center justify-between">
-              <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
-                Open Source Projects
-              </p>
-            </div>
-          </div>
+          <SectionHeader title="Open Source Projects" />
           <div className="border-t border-border">
             <div className="flex flex-col max-w-3xl mx-auto px-4 sm:px-7 py-9 md:py-16">
               {repos.map((repo) => (

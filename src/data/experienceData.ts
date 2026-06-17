@@ -1,4 +1,6 @@
-export const experienceData = [
+import type {Experience} from "@/types";
+
+export const experienceData: Experience[] = [
     {
         icon: "/portfolio/images/reysin.png",
         role: "Founder, Reysin",
@@ -12,12 +14,12 @@ export const experienceData = [
         ]
     },
     {
-        "icon": "/portfolio/images/photograph.png",
-        "role": "Photographer & Visual Content Creator, Freelance",
-        "location": "Lyon, FR",
-        "startYear": "2026",
-        "endYear": "Present",
-        "bulletPoints": [
+        icon: "/portfolio/images/photograph.png",
+        role: "Photographer & Visual Content Creator, Freelance",
+        location: "Lyon, FR",
+        startYear: "2026",
+        endYear: "Present",
+        bulletPoints: [
             "Capture dynamic street photography and nightlife scenes at bars and nightclubs across Lyon, producing compelling visual narratives for public display",
             "Design and create engaging graphics content optimized for social media platforms including Instagram, TikTok, and Facebook to maximize audience engagement",
             "Edit and mount video content from event coverage, combining raw footage with music, transitions, and effects for professional social media storytelling"

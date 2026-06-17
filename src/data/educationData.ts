@@ -1,17 +1,19 @@
-export const educationData = [
+import type {Education} from "@/types";
+
+export const educationData: Education[] = [
     {
-        date: "Sep 2023 - Sep 2026",
+        date: "Sep 2023 – Sep 2026",
         title: "Bachelor Responsable Projet Informatique (opt developer)",
-        subtitle: "Isitech — Lyon, FR"
+        subtitle: "Isitech — Lyon, FR",
     },
     {
-        date: "Aout 2023",
+        date: "Aug 2023",
         title: "Piscine 42",
-        subtitle: "Lyon, FR"
+        subtitle: "42 — Lyon, FR",
     },
     {
-        date: "Juillet 2023",
-        title: "Baccalauréat STI2D",
-        subtitle: "Lycée Jean-Lurçat — Martigues, FR"
-    }
+        date: "Jul 2023",
+        title: "Baccalaureat STI2D",
+        subtitle: "Lycee Jean-Lurcat — Martigues, FR",
+    },
 ];
