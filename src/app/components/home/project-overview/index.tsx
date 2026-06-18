@@ -6,11 +6,10 @@ import Reveal from "@/components/shared/reveal";
 const ProjectOverview = () => (
   <section aria-label="Project overview">
     <div className="container">
-      <div className="border-x border-border">
-        <div className="flex flex-col max-w-3xl mx-auto gap-10 sm:gap-16 px-4 sm:px-7 py-9 md:py-16">
+      <div className="flex flex-col max-w-3xl mx-auto gap-10 sm:gap-16 px-4 sm:px-7 py-9 md:py-16">
           <Reveal direction="up">
             <div className="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
-              <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">
+              <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[0.2em] text-muted-foreground uppercase font-medium">
                 Case studies
               </p>
               <div className="flex flex-col gap-2.5">
@@ -20,13 +19,13 @@ const ProjectOverview = () => (
                     href={item.url}
                     className="group flex items-center gap-2"
                   >
-                    <h4>{item.name}</h4>
+                    <h4 className="group-hover:text-accent transition-colors duration-300">{item.name}</h4>
                     <Image
                       src="/portfolio/images/icon/tile-arrow-icon.svg"
                       alt=""
                       width={24}
                       height={24}
-                      className="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in"
+                      className="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in opacity-60 group-hover:opacity-100"
                     />
                   </Link>
                 ))}
@@ -36,14 +35,14 @@ const ProjectOverview = () => (
 
           <Reveal direction="up" delay={200}>
             <div className="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
-              <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">
+              <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[0.2em] text-muted-foreground uppercase font-medium">
                 Side Projects
               </p>
               <div className="flex flex-col gap-2.5">
                 {projectOverview.sideProjects.map((item, index) => {
                   const content = (
                     <div className="group flex flex-wrap items-center gap-2">
-                      <h4 className={item.comingSoon ? "text-muted-foreground" : ""}>
+                      <h4 className={item.comingSoon ? "text-muted-foreground" : "group-hover:text-accent transition-colors duration-300"}>
                         {item.name}
                       </h4>
                       {item.comingSoon ? (
@@ -58,7 +57,7 @@ const ProjectOverview = () => (
                           alt=""
                           width={24}
                           height={24}
-                          className="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in"
+                          className="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in opacity-60 group-hover:opacity-100"
                         />
                       )}
                     </div>
@@ -76,7 +75,6 @@ const ProjectOverview = () => (
             </div>
           </Reveal>
         </div>
-      </div>
     </div>
   </section>
 );

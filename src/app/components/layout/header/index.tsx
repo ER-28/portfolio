@@ -1,11 +1,7 @@
-import AnnouncementBar from "./announcementBar"
+const Header = () => (
+  <header className="relative z-50">
+    <div className="h-12" />
+  </header>
+);
 
-const Header = () => {
-    return (
-        <header>
-            <AnnouncementBar/>
-        </header>
-    )
-}
-
-export default Header
+export default Header;

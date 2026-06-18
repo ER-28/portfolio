@@ -37,81 +37,77 @@ const OpenSourceProjects = () => {
   return (
     <section aria-label="Open Source Projects">
       <div className="container">
-        <div className="border-x border-border">
-          <Reveal direction="up">
-            <SectionHeader title="Open Source Projects" />
-          </Reveal>
-          <div className="border-t border-border">
-            <div className="flex flex-col max-w-3xl mx-auto px-4 sm:px-7 py-9 md:py-16">
-              {loading ? (
-                <div className="flex items-center justify-center py-12">
-                  <Reveal direction="fade">
-                    <span className="text-sm text-muted-foreground">Loading projects...</span>
-                  </Reveal>
-                </div>
-              ) : (
-                <Stagger staggerDelay={100} direction="up">
-                  {repos.map((repo) => (
-                    <Reveal key={repo.full_name} direction="up">
-                      <div className="flex flex-col gap-4 border-dashed border-b border-border last:border-b-0 pt-8 sm:pt-10 pb-8 sm:pb-10 first:pt-0">
-                        <div className="flex items-center gap-3">
-                          <SiGithub width={28} height={28} className="text-primary" />
+        <Reveal direction="up">
+          <SectionHeader title="Open Source Projects" />
+        </Reveal>
+        <div className="flex flex-col max-w-3xl mx-auto px-4 sm:px-7 py-9 md:py-16">
+            {loading ? (
+              <div className="flex items-center justify-center py-12">
+                <Reveal direction="fade">
+                  <span className="text-sm text-muted-foreground">Loading projects...</span>
+                </Reveal>
+              </div>
+            ) : (
+              <Stagger staggerDelay={100} direction="up">
+                {repos.map((repo) => (
+                  <Reveal key={repo.full_name} direction="up">
+                    <div className="flex flex-col gap-4 border-b border-border/40 last:border-b-0 pt-8 sm:pt-10 pb-8 sm:pb-10 first:pt-0">
+                      <div className="flex items-center gap-3">
+                        <SiGithub width={28} height={28} className="text-accent" />
+                        <Link
+                          href={repo.html_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-2"
+                        >
+                          <h5 className="group-hover:text-accent transition-colors duration-300">{repo.name}</h5>
+                        </Link>
+                      </div>
+                      {repo.description && (
+                        <p className="text-base font-normal text-muted-foreground">
+                          {repo.description}
+                        </p>
+                      )}
+                      <div className="flex flex-wrap items-center gap-3">
+                        {repo.language && (
+                          <span className="text-xs text-muted-foreground border border-border/60 rounded-lg py-1 px-2.5">
+                            {repo.language}
+                          </span>
+                        )}
+                        {repo.stargazers_count > 0 && (
+                          <span className="text-xs text-muted-foreground border border-border/60 rounded-lg py-1 px-2.5 flex items-center gap-1">
+                            ★ {repo.stargazers_count}
+                          </span>
+                        )}
+                        {repo.homepage && (
                           <Link
-                            href={repo.html_url}
+                            href={repo.homepage}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex items-center gap-2"
+                            className="text-xs text-accent hover:text-accent/80 border border-border/60 rounded-lg py-1 px-2.5 transition-colors duration-200"
                           >
-                            <h5>{repo.name}</h5>
+                            Website
                           </Link>
-                        </div>
-                        {repo.description && (
-                          <p className="text-base font-normal text-muted-foreground">
-                            {repo.description}
-                          </p>
-                        )}
-                        <div className="flex flex-wrap items-center gap-3">
-                          {repo.language && (
-                            <span className="text-xs text-muted-foreground border border-border rounded-lg py-1 px-2.5">
-                              {repo.language}
-                            </span>
-                          )}
-                          {repo.stargazers_count > 0 && (
-                            <span className="text-xs text-muted-foreground border border-border rounded-lg py-1 px-2.5 flex items-center gap-1">
-                              ★ {repo.stargazers_count}
-                            </span>
-                          )}
-                          {repo.homepage && (
-                            <Link
-                              href={repo.homepage}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-xs text-primary hover:underline border border-border rounded-lg py-1 px-2.5"
-                            >
-                              Website
-                            </Link>
-                          )}
-                        </div>
-                        {repo.topics.length > 0 && (
-                          <div className="flex flex-wrap gap-1.5">
-                            {repo.topics.map((topic) => (
-                              <span
-                                key={topic}
-                                className="text-xs bg-primary/5 text-primary rounded-full py-0.5 px-2.5"
-                              >
-                                {topic}
-                              </span>
-                            ))}
-                          </div>
                         )}
                       </div>
-                    </Reveal>
-                  ))}
-                </Stagger>
-              )}
-            </div>
+                      {repo.topics.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5">
+                          {repo.topics.map((topic) => (
+                            <span
+                              key={topic}
+                              className="text-xs bg-accent/10 text-accent rounded-full py-0.5 px-2.5"
+                            >
+                              {topic}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </Reveal>
+                ))}
+              </Stagger>
+            )}
           </div>
-        </div>
       </div>
     </section>
   );

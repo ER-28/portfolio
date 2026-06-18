@@ -1,34 +1,23 @@
-import Contributions from "./components/home/contributions"
-import OpenSourceProjects from "./components/home/open-source-projects"
-import Divider from "./components/divider"
-import AboutMe from "./components/home/about-me"
-import Education from "./components/home/education"
-import Experience from "./components/home/experience"
-import FeaturedWork from "./components/home/featured-work"
 import HeroSection from "./components/home/hero-section"
-import ProjectOverview from "./components/home/project-overview"
+import AboutSection from "./components/home/about-section"
+import SkillsSection from "./components/home/skills-section"
+import ProjectsSection from "./components/home/projects-section"
+import ExperienceSection from "./components/home/experience-section"
+import EducationSection from "./components/home/education-section"
+import OpenSourceSection from "./components/home/open-source-section"
+import ContactSection from "./components/home/contact-section"
 
-const Page = () => {
-  return (
-    <main>
-      <HeroSection/>
-      <Divider/>
-      <AboutMe/>
-      <Divider/>
-      <OpenSourceProjects/>
-      <Divider/>
-      <Contributions/>
-      <Divider/>
-      <FeaturedWork/>
-      <Divider/>
-      <Experience/>
-      <Divider/>
-      <Education/>
-      <Divider/>
-      <ProjectOverview/>
-      <Divider/>
-    </main>
-  )
-}
+const Page = () => (
+  <main>
+    <HeroSection/>
+    <AboutSection/>
+    <SkillsSection/>
+    <ProjectsSection/>
+    <ExperienceSection/>
+    <EducationSection/>
+    <OpenSourceSection/>
+    <ContactSection/>
+  </main>
+)
 
 export default Page
