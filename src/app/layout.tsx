@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import React from "react";
 
@@ -23,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header/>
         {children}
         <Footer/>
       </body>

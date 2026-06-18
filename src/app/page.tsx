@@ -4,7 +4,8 @@ import SkillsSection from "./components/home/skills-section"
 import ProjectsSection from "./components/home/projects-section"
 import ExperienceSection from "./components/home/experience-section"
 import EducationSection from "./components/home/education-section"
-import OpenSourceSection from "./components/home/open-source-section"
+import ContributionsSection from "./components/home/contributions-section"
+import OpenSourceLibsSection from "./components/home/open-source-libs-section"
 import ContactSection from "./components/home/contact-section"
 
 const Page = () => (
@@ -15,7 +16,8 @@ const Page = () => (
     <ProjectsSection/>
     <ExperienceSection/>
     <EducationSection/>
-    <OpenSourceSection/>
+    <ContributionsSection/>
+    <OpenSourceLibsSection/>
     <ContactSection/>
   </main>
 )
