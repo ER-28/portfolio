@@ -1,6 +1,10 @@
 name: Deploy Next.js site to Pages
 
 on:
+  # Daily rebuild to refresh GitHub API data (contributions, stars, etc.)
+  schedule:
+    - cron: '0 6 * * *'
+
   # Runs on pushes targeting the main branch
   push:
     branches:
