@@ -20,10 +20,10 @@ const ExperienceSection = () => (
         </Reveal>
         <div className="relative">
           <div className="absolute left-[18px] sm:left-[180px] top-0 bottom-0 w-px bg-accent/20" />
-          <Stagger staggerDelay={120} direction="up">
+          <Stagger staggerDelay={120} direction="up" className="flex flex-col gap-8">
             {experienceData.map((item, index) => (
               <Reveal key={index} direction="up">
-                <div className="relative flex flex-col sm:flex-row gap-4 sm:gap-8 pb-10 last:pb-0">
+                <div className="relative flex flex-col sm:flex-row gap-4 sm:gap-8">
                   <div className="flex sm:w-[180px] shrink-0">
                     <div className="relative flex items-start gap-3 sm:justify-end sm:w-full">
                       <div className="absolute left-0 sm:left-auto sm:right-[-8px] top-1.5 z-10 w-3 h-3 rounded-full bg-accent border-2 border-background" />
