@@ -16,15 +16,15 @@ const allProjects: ProjectItem[] = [
     name: cs.name,
     url: cs.url,
     comingSoon: false,
-    description: null as string | null,
-    tags: [] as string[],
+    description: cs.description ?? null,
+    tags: cs.tags ?? [],
   })),
   ...projectOverview.sideProjects.map((sp) => ({
     name: sp.name,
     url: sp.href ?? null,
     comingSoon: sp.comingSoon ?? false,
-    description: null as string | null,
-    tags: [] as string[],
+    description: sp.description ?? null,
+    tags: sp.tags ?? [],
   })),
 ];
 
@@ -56,8 +56,20 @@ const ProjectsSection = () => {
                         <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
                           <span className="text-muted-foreground text-xs font-mono">*</span>
                         </div>
-                        <h4 className="text-muted-foreground">{project.name}</h4>
+                        <h4 className="text-muted-foreground text-sm font-semibold">{project.name}</h4>
                       </div>
+                      {project.description && (
+                        <p className="text-xs text-muted-foreground/70 leading-relaxed mb-4">{project.description}</p>
+                      )}
+                      {project.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          {project.tags.map((tag) => (
+                            <span key={tag} className="text-[10px] text-muted-foreground bg-muted/50 py-0.5 px-2 rounded">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                       <div className="mt-auto">
                         <span className="text-[10px] tracking-wider uppercase text-muted-foreground/50 bg-muted/50 py-1 px-2 rounded">
                           Coming Soon
@@ -67,20 +79,22 @@ const ProjectsSection = () => {
                   ) : (
                     <Link
                       href={project.url!}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      {...(project.url!.startsWith("/") ? {} : {target: "_blank", rel: "noopener noreferrer"})}
                       className="group block p-6 rounded-xl bg-muted/20 border border-border/40 hover:border-accent/30 hover:bg-muted/40 transition-all duration-300 h-full"
                     >
                       <div className="flex items-center gap-3 mb-3">
                         <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
                           <span className="text-accent text-xs font-bold">&lt;/&gt;</span>
                         </div>
-                        <h4 className="text-primary group-hover:text-accent transition-colors duration-300">
+                        <h4 className="text-sm font-semibold text-primary group-hover:text-accent transition-colors duration-300">
                           {project.name}
                         </h4>
                       </div>
+                      {project.description && (
+                        <p className="text-xs text-muted-foreground/70 leading-relaxed mb-3">{project.description}</p>
+                      )}
                       {project.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-1.5 mt-3">
+                        <div className="flex flex-wrap gap-1.5">
                           {project.tags.map((tag) => (
                             <span key={tag} className="text-[10px] text-muted-foreground bg-muted/50 py-0.5 px-2 rounded">
                               {tag}

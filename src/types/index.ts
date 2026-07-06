@@ -16,12 +16,16 @@ export interface Education {
 export interface CaseStudy {
   name: string
   url: string
+  description?: string
+  tags?: string[]
 }
 
 export interface SideProject {
   name: string
   href?: string
   comingSoon?: boolean
+  description?: string
+  tags?: string[]
 }
 
 export interface ProjectOverview {
