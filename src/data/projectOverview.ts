@@ -2,7 +2,7 @@ import type {ProjectOverview} from "@/types";
 
 export const projectOverview: ProjectOverview = {
     caseStudies: [
-        {name: "Professional & Automated Infrastructure", url: "#"},
+        {name: "My hosting infrastructure", url: "/infrastructure"},
     ],
     sideProjects: [
         {name: "Photo Portfolio", href: "https://er-28.github.io/photofolio/"},

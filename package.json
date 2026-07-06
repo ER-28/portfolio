@@ -13,6 +13,7 @@
     "@icons-pack/react-simple-icons": "^13.13.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "mermaid": "^11.16.0",
     "next": "^16.1.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
