@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import {projectOverview} from "@/data/projectOverview";
 import Reveal from "@/components/shared/reveal";
 import Stagger from "@/components/shared/stagger";
+import {useLocale} from "@/lib/i18n/context";
 
 interface ProjectItem {
   name: string
@@ -11,24 +14,31 @@ interface ProjectItem {
   tags: string[]
 }
 
-const allProjects: ProjectItem[] = [
-  ...projectOverview.caseStudies.map((cs) => ({
-    name: cs.name,
-    url: cs.url,
-    comingSoon: false,
-    description: cs.description ?? null,
-    tags: cs.tags ?? [],
-  })),
-  ...projectOverview.sideProjects.map((sp) => ({
-    name: sp.name,
-    url: sp.href ?? null,
-    comingSoon: sp.comingSoon ?? false,
-    description: sp.description ?? null,
-    tags: sp.tags ?? [],
-  })),
-];
-
 const ProjectsSection = () => {
+  const {t, locale} = useLocale();
+
+  const localizedData = t.data.projects;
+
+  const allProjects: ProjectItem[] = [
+    ...projectOverview.caseStudies.map((cs, i) => ({
+      name: localizedData[i]?.name ?? cs.name,
+      url: cs.url,
+      comingSoon: false,
+      description: localizedData[i]?.description ?? null,
+      tags: localizedData[i]?.tags ?? [],
+    })),
+    ...projectOverview.sideProjects.map((sp, i) => {
+      const idx = projectOverview.caseStudies.length + i;
+      return {
+        name: localizedData[idx]?.name ?? sp.name,
+        url: sp.href ?? null,
+        comingSoon: sp.comingSoon ?? false,
+        description: localizedData[idx]?.description ?? null,
+        tags: localizedData[idx]?.tags ?? [],
+      };
+    }),
+  ];
+
   if (allProjects.length === 0) return null;
 
   return (
@@ -38,12 +48,12 @@ const ProjectsSection = () => {
           <Reveal direction="up">
             <div className="flex items-center gap-3 mb-2">
               <span className="w-1 h-6 bg-accent rounded-full" />
-              <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase font-medium">Work</p>
+              <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase font-medium">{t.projects.label}</p>
             </div>
           </Reveal>
           <Reveal direction="up" delay={100}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 md:mb-12 text-primary">
-              Projects
+              {t.projects.title}
             </h2>
           </Reveal>
           <Stagger staggerDelay={120} direction="up">
@@ -72,7 +82,7 @@ const ProjectsSection = () => {
                       )}
                       <div className="mt-auto">
                         <span className="text-[10px] tracking-wider uppercase text-muted-foreground/50 bg-muted/50 py-1 px-2 rounded">
-                          Coming Soon
+                          {t.projects.comingSoon}
                         </span>
                       </div>
                     </div>

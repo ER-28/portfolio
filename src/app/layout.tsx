@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/layout/footer";
+import Header from "./components/layout/header";
+import {LocaleProvider} from "@/lib/i18n/context";
 import React from "react";
 
 const inter = Inter({
@@ -22,8 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
-        <Footer/>
+        <LocaleProvider>
+          <Header />
+          {children}
+          <Footer/>
+        </LocaleProvider>
       </body>
     </html>
   );
