@@ -25,7 +25,6 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <LocaleProvider>
-          <Header />
           {children}
           <Footer/>
         </LocaleProvider>

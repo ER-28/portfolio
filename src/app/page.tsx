@@ -7,9 +7,12 @@ import EducationSection from "./components/home/education-section"
 import ContributionsSection from "./components/home/contributions-section"
 import OpenSourceLibsSection from "./components/home/open-source-libs-section"
 import ContactSection from "./components/home/contact-section"
+import Header from "@/app/components/layout/header";
+import React from "react";
 
 const Page = () => (
   <main>
+    <Header />
     <HeroSection/>
     <AboutSection/>
     <SkillsSection/>

@@ -18,6 +18,17 @@ export interface Translations {
   openSource: {label: string; title: string}
   contact: {label: string; title: string; subtitle: string}
   footer: {builtBy: string}
+  cv: {
+    title: string
+    summary: string
+    technicalSkills: string
+    languages: string
+    experience: string
+    education: string
+    projects: string
+    about: string
+    langItems: {label: string; level: string}[]
+  }
   infrastructure: {
     label: string
     title: string
@@ -66,6 +77,21 @@ export const translations: Record<Locale, Translations> = {
       subtitle: "Lyon, FR — Open for opportunities and collaboration.",
     },
     footer: {builtBy: "Built by"},
+    cv: {
+      title: "Curriculum Vitae",
+      summary: "Professional Summary",
+      technicalSkills: "Technical Skills",
+      languages: "Languages",
+      experience: "Experience",
+      education: "Education",
+      projects: "Projects",
+      about: "Developer, DevOps and Sysadmin based in Lyon. Passionate about modern architecture, refactoring, and building enterprise-grade software and open-source tools.",
+      langItems: [
+        {label: "French", level: "Native"},
+        {label: "English", level: "Professional"},
+        {label: "Spanish", level: "Intermediate"},
+      ],
+    },
     infrastructure: {
       label: "Architecture",
       title: "Professional Automated Infrastructure",
@@ -196,6 +222,21 @@ export const translations: Record<Locale, Translations> = {
       subtitle: "Lyon, FR — Ouvert aux opportunités et collaborations.",
     },
     footer: {builtBy: "Construit par"},
+    cv: {
+      title: "Curriculum Vitae",
+      summary: "Résumé Professionnel",
+      technicalSkills: "Compétences Techniques",
+      languages: "Langues",
+      experience: "Expérience",
+      education: "Formation",
+      projects: "Projets",
+      about: "Développeur, DevOps et Sysadmin basé à Lyon. Passionné par les architectures modernes, le refactoring, et la création de logiciels professionnels et d'outils open-source.",
+      langItems: [
+        {label: "Français", level: "Langue maternelle"},
+        {label: "Anglais", level: "Professionnel"},
+        {label: "Espagnol", level: "Intermédiaire"},
+      ],
+    },
     infrastructure: {
       label: "Architecture",
       title: "Infrastructure Automatisée Professionnelle",
@@ -326,6 +367,21 @@ export const translations: Record<Locale, Translations> = {
       subtitle: "Lyon, FR — Offen für Möglichkeiten und Zusammenarbeit.",
     },
     footer: {builtBy: "Erstellt von"},
+    cv: {
+      title: "Lebenslauf",
+      summary: "Berufliche Zusammenfassung",
+      technicalSkills: "Technische Fähigkeiten",
+      languages: "Sprachen",
+      experience: "Berufserfahrung",
+      education: "Ausbildung",
+      projects: "Projekte",
+      about: "Entwickler, DevOps und Sysadmin mit Sitz in Lyon. Begeistert von modernen Architekturen, Refactoring und der Entwicklung professioneller Software und Open-Source-Tools.",
+      langItems: [
+        {label: "Französisch", level: "Muttersprache"},
+        {label: "Englisch", level: "Fließend"},
+        {label: "Spanisch", level: "Mittelstufe"},
+      ],
+    },
     infrastructure: {
       label: "Architektur",
       title: "Professionelle Automatisierte Infrastruktur",
@@ -456,6 +512,21 @@ export const translations: Record<Locale, Translations> = {
       subtitle: "Lione, FR — Aperto a opportunità e collaborazioni.",
     },
     footer: {builtBy: "Realizzato da"},
+    cv: {
+      title: "Curriculum Vitae",
+      summary: "Profilo Professionale",
+      technicalSkills: "Competenze Tecniche",
+      languages: "Lingue",
+      experience: "Esperienza",
+      education: "Istruzione",
+      projects: "Progetti",
+      about: "Sviluppatore, DevOps e Sysadmin con sede a Lione. Appassionato di architetture moderne, refactoring e creazione di software enterprise e strumenti open-source.",
+      langItems: [
+        {label: "Francese", level: "Madrelingua"},
+        {label: "Inglese", level: "Professionale"},
+        {label: "Spagnolo", level: "Intermedio"},
+      ],
+    },
     infrastructure: {
       label: "Architettura",
       title: "Infrastruttura Automatizzata Professionale",
@@ -586,6 +657,21 @@ export const translations: Record<Locale, Translations> = {
       subtitle: "Lyon, FR — Abierto a oportunidades y colaboración.",
     },
     footer: {builtBy: "Construido por"},
+    cv: {
+      title: "Currículum Vitae",
+      summary: "Resumen Profesional",
+      technicalSkills: "Habilidades Técnicas",
+      languages: "Idiomas",
+      experience: "Experiencia",
+      education: "Educación",
+      projects: "Proyectos",
+      about: "Desarrollador, DevOps y Sysadmin con sede en Lyon. Apasionado por las arquitecturas modernas, el refactoring y la creación de software empresarial y herramientas open-source.",
+      langItems: [
+        {label: "Francés", level: "Nativo"},
+        {label: "Inglés", level: "Profesional"},
+        {label: "Español", level: "Intermedio"},
+      ],
+    },
     infrastructure: {
       label: "Arquitectura",
       title: "Infraestructura Automatizada Profesional",

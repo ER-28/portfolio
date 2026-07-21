@@ -1,12 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import {useLocale} from "@/lib/i18n/context";
 
 const Header = () => {
   const {locale, setLocale} = useLocale();
 
   return (
-    <header className="fixed top-0 right-0 z-50 p-4 sm:p-6">
+    <header className="fixed top-0 right-0 z-50 p-4 sm:p-6 flex items-center gap-3">
+      <Link
+        href={`/${locale}/cv`}
+        className="text-xs font-mono tracking-wider text-muted-foreground hover:text-accent transition-colors duration-200"
+      >
+        CV
+      </Link>
       <select
         value={locale}
         onChange={(e) => setLocale(e.target.value as "en" | "fr" | "de" | "it" | "es")}
