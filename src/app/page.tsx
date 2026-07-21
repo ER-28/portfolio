@@ -9,6 +9,7 @@ import OpenSourceLibsSection from "./components/home/open-source-libs-section"
 import ContactSection from "./components/home/contact-section"
 import Header from "@/app/components/layout/header";
 import React from "react";
+import Footer from "@/app/components/layout/footer";
 
 const Page = () => (
   <main>
@@ -22,6 +23,7 @@ const Page = () => (
     <ContributionsSection/>
     <OpenSourceLibsSection/>
     <ContactSection/>
+    <Footer/>
   </main>
 )
 
